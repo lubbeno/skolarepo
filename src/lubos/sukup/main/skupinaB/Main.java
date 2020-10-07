@@ -20,9 +20,8 @@ public class Main {
         System.out.println("pocet znakov je: "+ pocet);
 
     }
-
-    private static int pocetZnakov(String out) {
-        return 0;
+    public static int pocetZnakov(String vstup) {
+        return vstup.length();
     }
 
     //komentar na demostraciu git-u
