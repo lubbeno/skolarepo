@@ -1,4 +1,4 @@
-package lubos.sukup.main;
+package lubos.sukup.main.skupinaA;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ public class Main {
     }
 
     private static String vypocetSamohlasok(String out) {
-
+        return null;
     }
 
 }

@@ -21,7 +21,11 @@ public class Main {
 
     }
 
+    private static int pocetZnakov(String out) {
+        return 0;
+    }
 
+    //komentar na demostraciu git-u
     // vstupna premenna metody bude String a vystup bude int
 
 }
