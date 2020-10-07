@@ -18,7 +18,7 @@ public class Main {
                 // treba si zapisat samohlasku a
                 // treba zapisat pocet samohlasiek
 
-        //tess
+        //tesc
         String vystup= vypocetSamohlasok(out);
         System.out.println("vystup z klavesnice: " +  out);
         System.out.println(vystup + " pocet "+ vystup.length());
