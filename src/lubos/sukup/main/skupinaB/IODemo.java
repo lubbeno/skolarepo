@@ -1,4 +1,34 @@
 package lubos.sukup.main.skupinaB;
 
+import java.io.*;
+
 public class IODemo {
+
+    public static void main(String[] args) {
+
+        try {
+            FileReader reader = new FileReader("otazky_odpovede");
+            int znak = reader.read();
+            while(znak != -1){
+                System.out.println((char)znak);
+                znak = reader.read();
+            }
+
+            FileReader fileReader = new FileReader("otazky_odpovede");
+
+            BufferedReader bufferedReader =
+                    new BufferedReader(fileReader);
+
+         String riadok=   bufferedReader.readLine();
+
+            System.out.println(riadok);
+        } catch (FileNotFoundException e) {
+
+            System.out.println("chyba sa sla ");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }
