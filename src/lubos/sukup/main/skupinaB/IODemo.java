@@ -14,14 +14,19 @@ public class IODemo {
                 znak = reader.read();
             }
 
+
             FileReader fileReader = new FileReader("otazky_odpovede");
 
             BufferedReader bufferedReader =
                     new BufferedReader(fileReader);
+            String riadok=   bufferedReader.readLine();
+            while (riadok != null) {
 
-         String riadok=   bufferedReader.readLine();
+                System.out.println(riadok);
+                riadok=   bufferedReader.readLine();
 
-            System.out.println(riadok);
+            }
+
         } catch (FileNotFoundException e) {
 
             System.out.println("chyba sa sla ");
