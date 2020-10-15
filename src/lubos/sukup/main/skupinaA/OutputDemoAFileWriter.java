@@ -3,7 +3,7 @@ package lubos.sukup.main.skupinaA;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class OutputDemoA {
+public class OutputDemoAFileWriter {
 
     public static void main(String[] args) {
 
