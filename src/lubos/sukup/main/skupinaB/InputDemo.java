@@ -2,7 +2,7 @@ package lubos.sukup.main.skupinaB;
 
 import java.io.*;
 
-public class IODemo {
+public class InputDemo {
 
     public static void main(String[] args) {
 
@@ -29,7 +29,7 @@ public class IODemo {
 
         } catch (FileNotFoundException e) {
 
-            System.out.println("chyba sa sla ");
+            System.out.println("chyba sa nasla ");
         } catch (IOException e) {
             e.printStackTrace();
         }
