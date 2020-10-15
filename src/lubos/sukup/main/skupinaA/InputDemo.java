@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class IODemo {
+public class InputDemo {
 
     public static void main(String[] args) {
         FileReader reader =
