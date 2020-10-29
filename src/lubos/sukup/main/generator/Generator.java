@@ -10,5 +10,5 @@ public class Generator {
            System.out.println(random.nextInt(10)+1);
 
     }
-    
+
 }
