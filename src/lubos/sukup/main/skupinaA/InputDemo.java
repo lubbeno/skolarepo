@@ -20,7 +20,18 @@ public class InputDemo {
 
             reader = new FileReader("otazky_odpovede");
            BufferedReader reader1 = new BufferedReader(reader);
-            System.out.println(reader1.readLine());
+
+           String vystupRiadku1;
+           String vystup ="";
+           while ((vystupRiadku1 =reader1.readLine()) != null){
+               System.out.println(vystupRiadku1);
+                vystup = vystup +vystupRiadku1;
+
+           }
+
+            System.out.println(vystup);
+
+            System.out.println("riadok " +"\n" + "riadok" + "\n" + "riadok");
 
         } catch (FileNotFoundException e) {
             System.out.println("subor nenajdeny");

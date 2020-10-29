@@ -1,4 +1,4 @@
-package lubos.sukup.main.skupinaB;
+package lubos.sukup.main.skupinaB.IO;
 
 import java.io.*;
 

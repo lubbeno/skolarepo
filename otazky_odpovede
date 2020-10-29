@@ -1,1 +1,5 @@
-nas novy riadok
+Uloha pre dalsi tyzden.
+nacitat si pomocou URLConnection stranku
+http://www.sosholic.sk/
+
+a spocitat pomocou javy kolko krat sa nachadza sting script a div
