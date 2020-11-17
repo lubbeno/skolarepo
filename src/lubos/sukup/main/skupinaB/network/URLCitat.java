@@ -11,8 +11,8 @@ public class URLCitat {
     public static void main(String[] args) {
 
         try {
-            URL url = new URL("file:///C:/Users/lubossukup/git/skolarepo/otazky_odpovede");
-            //URL url = new URL("http://sosholic.sk");
+            //URL url = new URL("file:///C:/Users/lubossukup/git/skolarepo/otazky_odpovede");
+            URL url = new URL("https://official-joke-api.appspot.com/random_ten");
 
 
             BufferedReader  reader = new BufferedReader(new InputStreamReader(url.openStream()));

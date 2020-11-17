@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lubos.sukup.main.guidb.MainWindowController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <center>
+        <GridPane alignment="CENTER">
+            <Label text="id" GridPane.rowIndex="0" GridPane.columnIndex="0"> </Label>
+            <TextField fx:id="id" GridPane.rowIndex="0" GridPane.columnIndex="1"></TextField>
+            <Label text="Meno" GridPane.rowIndex="1" GridPane.columnIndex="0"> </Label>
+            <TextField fx:id="meno" GridPane.rowIndex="1" GridPane.columnIndex="1"></TextField>
+            <Label text="priezvisko " GridPane.rowIndex="2" GridPane.columnIndex="0"> </Label>
+            <TextField fx:id="priezvisko" GridPane.rowIndex="2" GridPane.columnIndex="1"></TextField>
+            <Label text="vek " GridPane.rowIndex="3" GridPane.columnIndex="0"> </Label>
+            <TextField fx:id="vek" GridPane.rowIndex="3" GridPane.columnIndex="1"></TextField>
+            <TextArea fx:id="select" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2" ></TextArea>
+
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="TOP_RIGHT">
+            <Button text="load table" onAction="#loadTable"  alignment="TOP_RIGHT"></Button>
+
+            <Button text="save" onAction="#save" alignment="TOP_RIGHT"></Button>
+        </HBox>
+    </bottom>
+
+</BorderPane>
