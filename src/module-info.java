@@ -4,4 +4,6 @@ module MyFirstGitProject {
     requires java.sql;
 
     opens lubos.sukup.main.guidb;
+    opens lubos.sukup.main.skupinaB.database.lubosdb;
+    opens lubos.sukup.main.skupinaA.databaze;
 }

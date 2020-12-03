@@ -12,7 +12,6 @@ public class MainWindowController {
     @FXML
     TextField meno;
 
-
     @FXML
     TextField priezvisko;
 
@@ -28,30 +27,61 @@ public class MainWindowController {
     @FXML
     public void save(){
 
-        try (Connection connection = initDb()) {
+        // 1 nacitame si z GUI jednotlive string data.
 
-            Statement statement = connection.createStatement();
+        String localId = id.getText().trim();
 
-            String sqlinsert = " INSERT INTO TESTTRI VALUES (2, 'Lubos','Sukup', 32); ";
+        String localMeno = meno.getText().trim();
 
-            String meno =  this.meno.getText().trim();
+        String localPriez = priezvisko.getText().trim();
 
-            String priezvisko = this.priezvisko.getText().trim();
+        String localVek = vek.getText().trim();
 
-            String vek = this.vek.getText().trim();
 
-            String id = this.id.getText().trim();
+        // 1 vytvvorit spojenie s DB.
 
-            String insert = " INSERT INTO TESTTRI VALUES ("+id+ ", '"+meno+"','"+priezvisko+"', "+vek+"); ";
 
-            statement.execute(insert);
+        String url = "jdbc:h2:tcp://localhost/C:/Users/lubossukup/JAVA/skola/DB/db.db";
+        String meno = "sa";
+        String heslo ="sa";
 
+        try {
+            Connection spojene = DriverManager.getConnection(url, meno, heslo);
+            Statement statement = spojene.createStatement();
+
+            String sql = "INSERT INTO TESTTRI VALUES ("+localId+",'"
+                                    + localMeno+"','"+ localPriez+"',"+localVek+"); ";
+
+
+            statement.execute(sql);
+            select.setText("data ulozene");
+
+        } catch (SQLException e) {
+            select.setText(e.getLocalizedMessage());
+            e.printStackTrace();
         }
 
-       catch (SQLException ex){
-           System.out.println(ex);
-       }
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -61,14 +91,51 @@ public class MainWindowController {
         String USER = "sa";
         String PASS = "sa";
 
-        return DriverManager.getConnection(DB_URL, USER, PASS);
+        Connection spojenie = DriverManager.getConnection(DB_URL, USER, PASS);
+
+        return spojenie;
+
+    }
+
+    //@FXML
+    private void loadTable(){
+
+        // 1 vytvorim si objekt connection
+        try (Connection connection = initDb()) {
+
+            //2 vytvorim si objekt statement
+            Statement statement = connection.createStatement();
+
+            // 3 vytvorim si String s dotayzom
+            String dalsi = "select * from TESTTRI";
+
+            ResultSet rs = statement.executeQuery(dalsi);
+
+            String vysledok="";
+            while (rs.next()){
+
+               int id =  (rs.getInt("ID"));
+               String meno = rs.getString("FIRST");
+               String priezvisko =rs.getString("LAST");
+               int age = (rs.getInt("AGE"));
+
+               String ciastocny = id+ " "+meno +" "+ priezvisko + " " + age + "\n";
+                vysledok = vysledok+ciastocny;
+
+            }
+            select.setText(vysledok);
+
+        }catch (SQLException ex){
+
+            System.out.println(ex);
+        }
 
     }
 
     @FXML
-    private void loadTable(){
+    public void pokus(){
 
-        try (Connection connection = initDb();) {
+        try (Connection connection = DatabaseCon.getInstance().getConnection()) {
 
             Statement statement = connection.createStatement();
 
@@ -77,24 +144,22 @@ public class MainWindowController {
             String vysledok="";
 
             ResultSet rs = statement.executeQuery(dalsi);
-            while (rs.next()){
+            while (rs.next()) {
 
-             String id =  Integer.toString(rs.getInt("ID"));
-               String meno = rs.getString("FIRST");
-               String priezvisko =rs.getString("LAST");
-               String age = Integer.toString(rs.getInt("AGE"));
+                String id = Integer.toString(rs.getInt("ID"));
+                String meno = rs.getString("FIRST");
+                String priezvisko = rs.getString("LAST");
+                String age = Integer.toString(rs.getInt("AGE"));
 
-               String ciastocny = id+ " "+meno +" "+ priezvisko + " " + age + "\n";
-                vysledok = vysledok+ciastocny;
+                String ciastocny = id + " " + meno + " " + priezvisko + " " + age + "\n";
+                vysledok = vysledok + ciastocny;
 
                 select.setText(vysledok);
+
             }
-
         }catch (SQLException ex){
-
             System.out.println(ex);
         }
-
     }
 
 }

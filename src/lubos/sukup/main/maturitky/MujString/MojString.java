@@ -1,4 +1,4 @@
-package lubos.sukup.main.MujString;
+package lubos.sukup.main.maturitky.MujString;
 
 public class MojString {
 

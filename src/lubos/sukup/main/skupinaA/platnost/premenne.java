@@ -1,5 +1,7 @@
 package lubos.sukup.main.skupinaA.platnost;
 
+import javafx.fxml.FXML;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +11,12 @@ public class premenne {
 
     public static void main(String[] args) {
 
-        metoda();
+        String address = "lubos+example@example.com";
+
+        boolean test = address.matches("^[a-zA-Z0-9!'#$%&._+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$");
+
+        System.out.println(test);
+
     }
 
 
@@ -61,6 +68,11 @@ public class premenne {
     }
 
 
+
+    @FXML
+    public void pokus(){
+
+    }
 
 
 

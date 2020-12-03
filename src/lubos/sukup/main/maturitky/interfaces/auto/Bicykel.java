@@ -1,4 +1,4 @@
-package lubos.sukup.main.skupinaB.database.auto;
+package lubos.sukup.main.maturitky.interfaces.auto;
 
 public class Bicykel implements Motor {
 

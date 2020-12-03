@@ -1,10 +1,6 @@
-package lubos.sukup.main.skupinaB.database.auto;
-
-import java.util.ArrayList;
-import java.util.List;
+package lubos.sukup.main.maturitky.interfaces.auto;
 
 public class OsobneAuto implements Motor {
-
 
 
     @Override
@@ -27,6 +23,20 @@ public class OsobneAuto implements Motor {
         Bicykel bicykel = new Bicykel();
         bicykel.radenie();
         bicykel.startuje();
+
+
+    }
+
+    {
+
+
+        if(false){
+
+            int a = 0;
+
+        }else {
+            int a = 10;
+        }
 
 
     }

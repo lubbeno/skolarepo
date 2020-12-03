@@ -1,5 +1,7 @@
 package lubos.sukup.main.skupinaB.database.lubosdb;
 
+import lubos.sukup.main.guidb.DatabaseCon;
+
 import java.net.MalformedURLException;
 import java.sql.*;
 
@@ -46,4 +48,6 @@ public class ConnectToDb {
         System.out.println(schema);
 
     }
+
+
 }
