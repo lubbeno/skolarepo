@@ -12,6 +12,8 @@ public class PoliaArray {
 
         int[] x={3,5,1,4,2};
 
+        int[] z={3,5,1,4,2};
+
         String[] mena = new String[]{"pepa","honza","jenda"};
 
         String test[]= new String[]{"pepa","honzaaaa","jenda"};
@@ -26,7 +28,7 @@ public class PoliaArray {
         System.out.println("--------------------po  zoradeni----------------------------");
         Arrays.sort(test);
         System.out.println(Arrays.toString(test));
-          
+
 
 
         x[0] =10;
