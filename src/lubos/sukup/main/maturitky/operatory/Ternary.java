@@ -15,11 +15,9 @@ public class Ternary {
 
         System.out.println(s);
 
-        // tu uz je a == 2
+        // tu uz je a == 2              true        :       false
         String ternary = (a ==1) ? ("je to pravda") : ("je to loz");
         int ternary01 = (a ==1) ?  100 : 101;
-
-
 
         System.out.println(ternary);
     }

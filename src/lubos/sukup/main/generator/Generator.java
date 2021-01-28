@@ -5,22 +5,19 @@ import java.util.Random;
 public class Generator {
 
 
-        char a = 'a';
-        float er = 5.4f;
+
 
         public static void main(String[] args) {
             Random random = new Random();
-            System.out.println(random.nextInt(10)+1);
-
-            int y =5;
-
-            if(false){
-                int a =0;
-            }
-            else {
-                int x = 10;
-            }
+            System.out.println(random.nextInt(500));
 
         }
 
+
+
+  private int  generator() {
+        Random random = new Random();
+        return (random.nextInt(500));
+
+    }
 }

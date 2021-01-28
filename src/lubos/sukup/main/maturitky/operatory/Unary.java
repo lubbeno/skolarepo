@@ -36,7 +36,7 @@ public class Unary {
         // Let's look at postfix increment in a variable declaration
         a = 1; //1
         int a2 = a++;
-       // a = a+1;
+        //a = a+1;
 
 
         System.out.println("The value of a is " + a);
@@ -44,7 +44,7 @@ public class Unary {
 
         // Let's look at postfix in an expression...
         a = 1;
-        if (++a == 1) {
+        if (a++ == 1) {
             System.out.println("If Statement, now the value of a is " + a);
         }else {
             System.out.println("ak je vyraz nepravda a a je: " +a );
