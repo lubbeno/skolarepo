@@ -1,5 +1,6 @@
 package lubos.sukup.main.skupinaB.database.lubosdb;
 
+import javafx.event.ActionEvent;
 import lubos.sukup.main.guidb.DatabaseCon;
 
 import java.net.MalformedURLException;
@@ -48,6 +49,10 @@ public class ConnectToDb {
         System.out.println(schema);
 
     }
+
+
+    static int cisloTlacidla=0;
+
 
 
 }

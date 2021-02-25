@@ -33,6 +33,9 @@
         <HBox alignment="CENTER_RIGHT">
             <Button text="save" onAction="#save"></Button>
             <Button text="load" onAction="#load"></Button>
+
+            <Button text="vekovy priemer" onAction="#priemer" />
+            <Button text="priezviska" onAction="#priezviska"></Button>
         </HBox>
     </bottom>
 

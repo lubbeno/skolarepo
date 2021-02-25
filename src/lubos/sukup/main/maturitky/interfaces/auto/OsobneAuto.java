@@ -24,7 +24,6 @@ public class OsobneAuto implements Motor {
         bicykel.radenie();
         bicykel.startuje();
 
-
     }
 
     {

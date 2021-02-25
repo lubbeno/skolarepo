@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import lubos.sukup.main.skupinaA.databaze.commons.Uzivatel;
 
-public class Main extends Application {
+
+public class DbSkupinaA extends Application {
 
 
     @Override
@@ -21,6 +23,9 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
+
+
 
 
     }

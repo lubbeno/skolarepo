@@ -22,7 +22,7 @@
         <Label text="vek" GridPane.rowIndex="2" GridPane.columnIndex="0"></Label>
         <TextField fx:id="vek" GridPane.rowIndex="2" GridPane.columnIndex="1"></TextField>
 
-        <TextArea fx:id="vysledok" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2"></TextArea>
+        <TextArea fx:id="zoznam" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2"></TextArea>
 
     </GridPane>
 
@@ -34,7 +34,9 @@
         <HBox alignment="CENTER_RIGHT">
 
             <Button text="save" onAction="#save"></Button>
-            <Button text="load"></Button>
+            <Button text="load" onAction="#load"></Button>
+            <Button text="vekovy priemer" onAction="#priemer" />
+            <Button text="priezviska" onAction="#priezviska" />
         </HBox>
     </bottom>
 
