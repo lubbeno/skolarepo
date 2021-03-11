@@ -1,6 +1,6 @@
 package lubos.sukup.main.skupinaA.databaze.commons;
 
-public class HlavnaTabulka {
+public abstract class HlavnaTabulka {
 
     private int id;
 
@@ -15,4 +15,6 @@ public class HlavnaTabulka {
     public void setId(int id) {
         this.id = id;
     }
+
+    public abstract void test();
 }

@@ -47,4 +47,11 @@ public class Uzivatel extends HlavnaTabulka{
     public void setFirst(String first) {
         this.first = first;
     }
+
+
+    @Override
+    public void test() {
+        System.out.println("test Uivatel");
+    }
+
 }

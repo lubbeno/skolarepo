@@ -52,8 +52,8 @@ public class DatabazaContoller {
 
             statement.execute(sql);
 
-            Uzivatel uzivatel = new Uzivatel();
-            uzivatel.setId(localId);
+            Uzivatel uzivatel = new Uzivatel(localId);
+            //uzivatel.setId(localId);
             uzivatel.setFirst(localmeno);
             uzivatel.setAge(localVek);
             uzivatel.setLast(localPriezvisko);
@@ -91,7 +91,7 @@ public class DatabazaContoller {
             String zoznamDatabaze="ID MENO PRIEZVICKO VEK \n";
             while (vystupZDatabazy.next()){
 
-                Uzivatel uzivatel = new Uzivatel();
+
 
 
                int id = vystupZDatabazy.getInt("ID");
@@ -99,7 +99,8 @@ public class DatabazaContoller {
               int vek =  vystupZDatabazy.getInt("AGE");
              String priezvisko =  vystupZDatabazy.getString("LAST");
 
-                uzivatel.setId(id);
+                Uzivatel uzivatel = new Uzivatel(id);
+                //uzivatel.setId(id);
                 uzivatel.setFirst(meno);
                 uzivatel.setAge(vek);
                 uzivatel.setLast(priezvisko);

@@ -1,9 +1,9 @@
 package lubos.sukup.main.skupinaB.database.lubosdb.commons;
 
-public class Uzivatel {
+public class Uzivatel extends BaseDB {
 
 
-    private int id;
+
 
     private int age;
 
@@ -11,23 +11,18 @@ public class Uzivatel {
 
     private String first;
 
-    public Uzivatel() {
+    public Uzivatel(int id) {
+        super(id);
     }
 
     public Uzivatel(int id, int age, String last, String first) {
+        super(id);
         this.id = id;
         setAge(age);
         this.last = last;
         this.first = first;
     }
 
-    public void setId(int id){
-        this.id=id;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     public int getAge() {
         return age;

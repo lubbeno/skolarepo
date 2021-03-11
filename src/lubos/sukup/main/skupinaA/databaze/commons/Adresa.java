@@ -2,6 +2,7 @@ package lubos.sukup.main.skupinaA.databaze.commons;
 
 public class Adresa extends HlavnaTabulka {
 
+    ///int id;
     private String ulica;
 
     private int cislo;
@@ -37,5 +38,10 @@ public class Adresa extends HlavnaTabulka {
 
     public void setMesto(String mesto) {
         this.mesto = mesto;
+    }
+
+    @Override
+    public void test() {
+        System.out.println("test Adresa");
     }
 }
